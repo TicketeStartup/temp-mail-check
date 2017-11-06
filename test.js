@@ -1,6 +1,7 @@
 "use strict";
 
-const _tempEmailCheck = require('./');
+const _tempEmailCheck = require('./'),
+    _ = require('underscore');
 const chai = require('chai'),
     expect = chai.expect;
 
@@ -34,6 +35,16 @@ describe('.getSource()', function () {
         it('should return Array Source', function () {
             expect(_tempEmailCheck.getSource()).to.be.a('array');
             expect(_tempEmailCheck.getSource()).to.have.length.greaterThan(0);
+        });
+    });
+});
+
+
+describe('Test if a list contains duplicates', function () {
+    describe('#', function () {
+        it('should return the same length for getSource() and _.unique(getSource())', function () {
+            expect(_tempEmailCheck.getSource()).to.be.a('array');
+            expect(_tempEmailCheck.getSource().length).to.equal(_.unique(_tempEmailCheck.getSource()).length)
         });
     });
 });
