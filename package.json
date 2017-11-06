@@ -1,0 +1,33 @@
+{
+    "name": "temp-mail-check",
+    "version": "0.0.2",
+    "description": "Node JS plugin to compare email addresses with domains that generate known temporary emails",
+    "main": "index.js",
+    "scripts": {
+        "test": "node ./node_modules/mocha/bin/mocha test.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TicketeStartup/temp-mail-check.git"
+    },
+    "keywords": [
+        "temp",
+        "email",
+        "disposable",
+        "temp-mail.org",
+        "temporary"
+    ],
+    "author": "Jay <andrea-giglio@live.it>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/TicketeStartup/temp-mail-check/issues"
+    },
+    "homepage": "https://github.com/TicketeStartup/temp-mail-check#readme",
+    "dependencies": {
+        "underscore": "^1.8.3"
+    },
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "mocha": "^4.0.1"
+    }
+}
