@@ -20,10 +20,10 @@ describe('.checkEmail()', function () {
 
 describe('.findDomain()', function () {
     describe('#', function () {
-        it('should return false when the domain is in the source', function () {
+        it('should return false when the domain is not in the source', function () {
             expect(_tempEmailCheck.findDomain("tickete.it")).to.be.false;
         });
-        it('should return true when the domain is not in source', function () {
+        it('should return true when the domain is in source', function () {
             expect(_tempEmailCheck.findDomain("0-mail.com")).to.be.true;
         });
     });
