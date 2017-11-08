@@ -1,9 +1,23 @@
 "use strict";
+const __sourceFilePath = "./disposable-email-domains.json";
 
 const _tempEmailCheck = require('./'),
+    fs = require('fs'),
     _ = require('underscore');
 const chai = require('chai'),
     expect = chai.expect;
+
+describe('Source file check', function () {
+    describe('# existsSync()', function () {
+        it('should return true when the source file exists', function () {
+            expect(fs.existsSync(__sourceFilePath)).to.be.true;
+        });
+        it('should return true when the file contains a valid json', function () {
+            let _source = JSON.parse(fs.readFileSync(__sourceFilePath, "utf8"));
+            expect(_source).to.be.an('array');
+        });
+    });
+});
 
 describe('.checkEmail()', function () {
     describe('# jay@tickete.it', function () {
@@ -38,7 +52,6 @@ describe('.getSource()', function () {
         });
     });
 });
-
 
 describe('Test if a list contains duplicates', function () {
     describe('#', function () {
