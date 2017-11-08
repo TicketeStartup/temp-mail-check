@@ -20,7 +20,6 @@ if (args) {
                 _source.push(_domains[i].toLowerCase());
             } else {
                 invalid++;
-                console.log("->", _domains[i])
             }
         }
     }
