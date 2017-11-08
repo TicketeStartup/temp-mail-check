@@ -70,7 +70,7 @@ This tool checks that the domains you are adding are not already present and upd
 
 It is important to enter only valid domains that respect the regex: 
 
-	^([\s\S])+\.+[a-z]{2,4}$
+	^([\s\S])+\.+[a-z]{2,}$
 
 After entering the domains make a commit and send a pullrequest.
 

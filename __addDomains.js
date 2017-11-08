@@ -15,10 +15,12 @@ if (args) {
     if (cmd_list) {
         _domains = cmd_list.split(",");
         for (let i = 0; i < _domains.length; i++) {
-            if (/^([\s\S])+\.+[a-z]{2,4}$/.test(_domains[i])) {
+            if (/^([\s\S])+\.+[a-z]{2,}$/.test(_domains[i])) {
+
                 _source.push(_domains[i].toLowerCase());
             } else {
                 invalid++;
+                console.log("->", _domains[i])
             }
         }
     }
@@ -33,7 +35,7 @@ console.log("Not present domains added: " + diff);
 console.log("------------------------------------");
 if (invalid > 0) {
     console.log("Invalid domains: " + invalid);
-    console.log("|-- Plz make sure the domain name respects the regex: /^([\s\S])+\.+[a-z]{2,4}$/");
+    console.log("|-- Plz make sure the domain name respects the regex: /^([\s\S])+\.+[a-z]{2,}$/");
     console.log("------------------------------------");
 }
 if (diff > 0) {
