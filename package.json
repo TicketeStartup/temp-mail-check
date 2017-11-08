@@ -1,6 +1,6 @@
 {
     "name": "temp-mail-check",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "description": "Node JS plugin to compare email addresses with domains that generate known temporary emails",
     "main": "index.js",
     "scripts": {
